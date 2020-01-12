@@ -8,6 +8,8 @@ RUN apk update && \
     apk add ffmpeg
 
 RUN mkdir -p /run/nginx
+RUN mkdir -p /live/hls
+RUN mkdir -p /live/dash
 
 COPY nginx.conf /etc/nginx/nginx.conf
 
