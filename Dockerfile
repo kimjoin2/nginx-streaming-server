@@ -7,6 +7,8 @@ RUN apk update && \
     apk add nginx-mod-rtmp && \
     apk add ffmpeg
 
+RUN mkdir -p /run/nginx
+
 COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 1935
